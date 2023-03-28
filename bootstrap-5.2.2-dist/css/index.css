@@ -1,0 +1,201 @@
+:root {
+    --black: black;
+    --white: white;
+    --organge: #FF6338;
+    --ccc: #ccc;
+}
+
+body {
+    text-transform: capitalize;
+}
+
+/* start everyone */
+.span_nav {
+    color: var(--organge);
+}
+
+.font_text {
+    font-family: 'Alkatra', cursive;
+}
+
+.a_dec {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.div_zindex {
+    z-index: 1;
+}
+
+/* end everyone */
+/* start navbar */
+
+section .navbar .container div ul li .active {
+    font-weight: bold;
+    color: var(--black);
+    border-bottom: 3px solid var(--organge);
+}
+
+section .navbar .container div ul li .active_hover:hover {
+    color: var(--black);
+    border-bottom: 3px solid var(--organge);
+}
+
+/* end navbar */
+/* start header */
+section .section_background {
+    background-color: rgba(0, 0, 0, 0.749);
+    height: 90vh;
+    z-index: 1;
+}
+
+section .div_images1,
+section .div_images2,
+section .div_images3 {
+    background-size: cover;
+    background-position: center center;
+    height: 90vh;
+}
+
+section .div_images1 {
+    background-image: url("../../images/images\ header/8543-gettyimages-ivanko-brnjakovic.jpg");
+}
+
+section .div_images2 {
+    background-image: url("../../images/images\ header/signs-husband-happy-marriage.webp");
+}
+
+section .div_images3 {
+    background-image: url("../../images/images\ header/ways-to-increase-your-appeal.jpg");
+}
+
+section div .arrow {
+    background-color: var(--organge);
+    height: 50px;
+    width: 50px;
+    margin-top: 40vh;
+    transition: 0.5s;
+}
+
+section div .arrow:hover {
+    color: var(--white);
+    background-color: black;
+}
+
+section div div .div_images1 div h1 {
+    font-size: 70px;
+}
+
+section div div .div_images1 div .ccc {
+    color: var(--ccc);
+}
+
+section div div .div_images1 div .hr_border {
+    border-top: 3px solid var(--white);
+}
+
+.my_arrow {
+    top: 100px;
+    margin: 8% 0;
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.div_icon:hover {
+    color: var(--white);
+}
+
+/* end header */
+/* start about */
+section .bg_eee {
+    background-color: #eee;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+section .bg_eee .about_size {
+    font-size: 60px;
+}
+
+section .bg_eee .about_size::before {
+    content: "";
+    position: absolute;
+    width: 130px;
+    height: 3px;
+    background-color: red;
+    margin-top: 85px;
+    margin-left: 45px;
+}
+
+section .bg_eee .container .p_margin {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.octagonWrap {
+    width: 150px;
+    height: 150px;
+}
+
+.octagonWrap .octagon {
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    transform: rotate(45deg);
+    transition: 0.5s;
+    background-color: var(--black);
+}
+
+section .bg_eee .container .row div .octagonWrap .octagon:hover {
+    background-color: var(--organge);
+}
+
+section .bg_eee .container .row div .octagonWrap .icon_square {
+    transform: rotate(0deg);
+}
+
+section .bg_eee .container .row div .p_organge {
+    color: var(--organge);
+}
+
+section .bg_eee .container .row div .p_organge:hover {
+    color: blue;
+}
+
+/* end about */
+/* start media */
+@media (max-width: 991px) and (min-width: 0px) {
+
+    section .navbar .container div ul li .active,
+    section .navbar .container div ul li .active_hover:hover {
+        border-bottom: 0px solid var(--organge);
+    }
+
+    section .bg_eee .container .p_margin {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+/* end media */

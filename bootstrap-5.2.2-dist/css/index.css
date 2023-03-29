@@ -27,21 +27,76 @@ body {
     z-index: 1;
 }
 
-/* end everyone */
-/* start navbar */
+.my_arrow {
+    margin: 8% 0;
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+}
 
-section .navbar .container div ul li .active {
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.div_icon:hover {
+    color: var(--white);
+}
+
+.about_size,
+.about_size1 {
+    font-size: 60px;
+}
+
+.about_size::before,
+.about_size1::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: red;
+    margin-top: 85px;
+    margin-left: 45px;
+}
+
+.about_size::before {
+    width: 140px;
+}
+
+.about_size1::before {
+    width: 210px;
+}
+
+.my_arrow_top {
+    top: 100px;
+}
+
+.active1,
+.active2 {
     font-weight: bold;
     color: var(--black);
     border-bottom: 3px solid var(--organge);
 }
 
-section .navbar .container div ul li .active_hover:hover {
+.active_hover:hover {
     color: var(--black);
     border-bottom: 3px solid var(--organge);
 }
 
-/* end navbar */
+/* end everyone */
 /* start header */
 section .section_background {
     background-color: rgba(0, 0, 0, 0.749);
@@ -94,37 +149,6 @@ section div div .div_images1 div .hr_border {
     border-top: 3px solid var(--white);
 }
 
-.my_arrow {
-    top: 100px;
-    margin: 8% 0;
-    -moz-animation: bounce 2s infinite;
-    -webkit-animation: bounce 2s infinite;
-    animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-        transform: translateY(0);
-    }
-
-    40% {
-        transform: translateY(-30px);
-    }
-
-    60% {
-        transform: translateY(-15px);
-    }
-}
-
-.div_icon:hover {
-    color: var(--white);
-}
-
 /* end header */
 /* start about */
 section .bg_eee {
@@ -133,23 +157,9 @@ section .bg_eee {
     padding-bottom: 100px;
 }
 
-section .bg_eee .about_size {
-    font-size: 60px;
-}
-
-section .bg_eee .about_size::before {
-    content: "";
-    position: absolute;
-    width: 130px;
-    height: 3px;
-    background-color: red;
-    margin-top: 85px;
-    margin-left: 45px;
-}
-
-section .bg_eee .container .p_margin {
-    margin-left: 200px;
-    margin-right: 200px;
+.p_margin {
+    margin-left: 300px;
+    margin-right: 300px;
 }
 
 .octagonWrap {
@@ -184,17 +194,90 @@ section .bg_eee .container .row div .p_organge:hover {
 }
 
 /* end about */
+/* start imagebackgound */
+.bacgound_image {
+    background-image: url("../../images/image\ background/pngtree-liquid-smoke-background-on-black-color-picture-image_1160129.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+/* end imagebackgound */
+/* start our */
+section .container .row div .image_width {
+    width: 108%;
+}
+
+section .container .row div .card .image img {
+    transition: .5s;
+}
+
+.card:hover .image img {
+    opacity: .5;
+    transform: translateX(30%);
+}
+
+.details {
+    top: 0%;
+    left: 0;
+    width: 70%;
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+}
+
+.card:hover .details {
+    transform: perspective(2000px) rotateY(0deg);
+}
+
+section .container .row div .card .details .center {
+    padding: 22px;
+    top: 50%;
+    height: 250px;
+    transform: translateY(-50%);
+}
+
+section .container .row div .card .details .center h1 {
+    color: #ff3636;
+    line-height: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+section .container .row div .card .details .center h1 span {
+    font-size: 14px;
+    color: #262626;
+}
+
+section .container .row div .card .details .center .icon_backgound {
+    background-color: var(--organge);
+}
+
+section .container .row div .card .image .my_image {
+    height: 250px;
+}
+
+/* end our */
 /* start media */
 @media (max-width: 991px) and (min-width: 0px) {
 
-    section .navbar .container div ul li .active,
-    section .navbar .container div ul li .active_hover:hover {
+    .active1,
+    .active2,
+    .active_hover:hover {
         border-bottom: 0px solid var(--organge);
     }
 
-    section .bg_eee .container .p_margin {
+    .p_margin {
         margin-left: 0px;
         margin-right: 0px;
+    }
+
+    section .container .row div .image_width {
+        width: 100%;
+    }
+
+    .about_size::before,
+    .about_size1::before {
+        display: none;
     }
 }
 

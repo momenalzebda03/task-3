@@ -12,9 +12,15 @@ body {
 /* start everyone */
 .span_nav {
     color: var(--organge);
+    text-decoration: none;
+}
+
+.span_nav:hover {
+    color: blue;
 }
 
 .font_text {
+    font-size: 60px;
     font-family: 'Alkatra', cursive;
 }
 
@@ -57,13 +63,9 @@ body {
     color: var(--white);
 }
 
-.about_size,
-.about_size1 {
-    font-size: 60px;
-}
-
 .about_size::before,
-.about_size1::before {
+.about_size1::before,
+.about_size2::before {
     content: "";
     position: absolute;
     height: 3px;
@@ -80,6 +82,10 @@ body {
     width: 210px;
 }
 
+.about_size2::before {
+    width: 250px;
+}
+
 .my_arrow_top {
     top: 100px;
 }
@@ -94,6 +100,12 @@ body {
 .active_hover:hover {
     color: var(--black);
     border-bottom: 3px solid var(--organge);
+}
+
+section div .arrow:hover,
+.section_orainge div div div .button_border:hover {
+    color: var(--white);
+    background-color: black;
 }
 
 /* end everyone */
@@ -130,11 +142,6 @@ section div .arrow {
     width: 50px;
     margin-top: 40vh;
     transition: 0.5s;
-}
-
-section div .arrow:hover {
-    color: var(--white);
-    background-color: black;
 }
 
 section div div .div_images1 div h1 {
@@ -185,14 +192,6 @@ section .bg_eee .container .row div .octagonWrap .icon_square {
     transform: rotate(0deg);
 }
 
-section .bg_eee .container .row div .p_organge {
-    color: var(--organge);
-}
-
-section .bg_eee .container .row div .p_organge:hover {
-    color: blue;
-}
-
 /* end about */
 /* start imagebackgound */
 .bacgound_image {
@@ -204,7 +203,7 @@ section .bg_eee .container .row div .p_organge:hover {
 /* end imagebackgound */
 /* start our */
 section .container .row div .image_width {
-    width: 108%;
+    width: 111%;
 }
 
 section .container .row div .card .image img {
@@ -257,6 +256,83 @@ section .container .row div .card .image .my_image {
 }
 
 /* end our */
+/* start oun */
+.section_orainge {
+    background-color: var(--organge);
+}
+
+.section_orainge div div div .row .h5_border {
+    border-left: 2px solid var(--ccc);
+}
+
+.section_orainge div div div .button_border {
+    width: 50px;
+    height: 50px;
+    background-color: var(--organge);
+    transition: 1s;
+}
+
+/* end oun */
+/* start what */
+
+.ag-courses_item {
+    margin: 0 15px 30px;
+}
+
+.ag-courses-item_link {
+    background-color: var(--organge);
+    text-decoration: none;
+}
+
+.ag-courses-item_link:hover,
+.ag-courses-item_link:hover .ag-courses-item_date {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.ag-courses-item_link:hover .ag-courses-item_bg {
+    -webkit-transform: scale(10);
+    -ms-transform: scale(10);
+    transform: scale(10);
+}
+
+.ag-courses-item_title {
+    z-index: 2;
+}
+
+.ag-courses-item_bg {
+    height: 128px;
+    width: 128px;
+    background-color: #f9b234;
+    z-index: 1;
+    top: -75px;
+    right: -75px;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.item_bg_1 {
+    background-color: #3ecd5e;
+}
+
+.item_bg_2 {
+    background-color: #e44002;
+}
+
+.item_bg_3 {
+    background-color: #952aff;
+}
+
+.item_bg_4 {
+    background-color: #cd3e94;
+}
+
+.item_bg_5 {
+    background-color: #4c49ea;
+}
+
+/* end what */
 /* start media */
 @media (max-width: 991px) and (min-width: 0px) {
 
@@ -275,9 +351,22 @@ section .container .row div .card .image .my_image {
         width: 100%;
     }
 
+    .col_border {
+        border-right: 0px solid white;
+    }
+
+    .section_orainge div div div .row .h5_border {
+        border-left: 0px solid var(--ccc);
+    }
+
     .about_size::before,
-    .about_size1::before {
+    .about_size1::before,
+    .about_size2::before {
         display: none;
+    }
+
+    .font_text {
+        font-size: 30px;
     }
 }
 

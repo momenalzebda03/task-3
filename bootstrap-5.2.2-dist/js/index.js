@@ -19,3 +19,14 @@ for (let i = 0; i < div_our.length; i++) {
         this.classList.add("active2");
     });
 }
+
+var div_back = document.querySelectorAll(".div_back");
+for (let i = 0; i < div_back.length; i++) {
+    var chekd = div_back[i];
+    chekd.addEventListener("click", function () {
+        for (let i = 0; i < div_back.length; i++) {
+            div_back[i].classList.remove("active3");
+        }
+        this.classList.add("active3");
+    });
+}

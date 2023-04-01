@@ -14,10 +14,6 @@ body {
     text-decoration: none;
 }
 
-.span_nav:hover {
-    color: blue;
-}
-
 .font_text {
     font-size: 60px;
     font-family: 'Alkatra', cursive;
@@ -98,6 +94,7 @@ section div .arrow:hover,
 
 .bacgound_image,
 .section_image {
+    background-attachment: fixed;
     background-image: url("../../images/image\ background/pngtree-liquid-smoke-background-on-black-color-picture-image_1160129.jpg");
     background-size: cover;
     background-position: center center;
@@ -107,6 +104,63 @@ section div .arrow:hover,
     background-color: #eee;
     padding-top: 100px;
     padding-bottom: 100px;
+}
+
+.ag-courses_item {
+    margin: 0 15px 30px;
+}
+
+.ag-courses-item_link {
+    background-color: var(--organge);
+    text-decoration: none;
+}
+
+.ag-courses-item_link:hover,
+.ag-courses-item_link:hover .ag-courses-item_date {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.ag-courses-item_link:hover .ag-courses-item_bg {
+    -webkit-transform: scale(10);
+    -ms-transform: scale(10);
+    transform: scale(10);
+}
+
+.ag-courses-item_title {
+    z-index: 2;
+}
+
+.ag-courses-item_bg {
+    height: 128px;
+    width: 128px;
+    background-color: #f9b234;
+    z-index: 1;
+    top: -75px;
+    right: -75px;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.item_bg_1 {
+    background-color: #3ecd5e;
+}
+
+.item_bg_2 {
+    background-color: #e44002;
+}
+
+.item_bg_3 {
+    background-color: #952aff;
+}
+
+.item_bg_4 {
+    background-color: #cd3e94;
+}
+
+.item_bg_5 {
+    background-color: #4c49ea;
 }
 
 /* end everyone */
@@ -119,9 +173,11 @@ section .section_background {
 
 section .div_images1,
 section .div_images2,
-section .div_images3 {
+section .div_images3,
+.div_back_image {
+    background-attachment: fixed;
+    background-position: center;
     background-size: cover;
-    background-position: center center;
     height: 90vh;
 }
 
@@ -269,63 +325,6 @@ section .about_size1::before {
 
 /* end oun */
 /* start what */
-
-.section_white .container div .row div .ag-courses_item {
-    margin: 0 15px 30px;
-}
-
-.section_white .container div .row div .ag-courses_item .ag-courses-item_link {
-    background-color: var(--organge);
-    text-decoration: none;
-}
-
-.section_white .container div .row div .ag-courses_item .ag-courses-item_link:hover,
-.section_white .container div .row div .ag-courses_item .ag-courses-item_link:hover .ag-courses-item_date {
-    text-decoration: none;
-    color: #FFF;
-}
-
-.section_white .container div .row div .ag-courses_item .ag-courses-item_link:hover .ag-courses-item_bg {
-    -webkit-transform: scale(10);
-    -ms-transform: scale(10);
-    transform: scale(10);
-}
-
-.section_white .container div .row div .ag-courses_item a .ag-courses-item_title {
-    z-index: 2;
-}
-
-.section_white .container div .row div .ag-courses_item a .ag-courses-item_bg {
-    height: 128px;
-    width: 128px;
-    background-color: #f9b234;
-    z-index: 1;
-    top: -75px;
-    right: -75px;
-    -webkit-transition: all .5s ease;
-    -o-transition: all .5s ease;
-    transition: all .5s ease;
-}
-
-.section_white .container div .row div .ag-courses_item a .item_bg_1 {
-    background-color: #3ecd5e;
-}
-
-.section_white .container div .row div .ag-courses_item a .item_bg_2 {
-    background-color: #e44002;
-}
-
-.section_white .container div .row div .ag-courses_item a .item_bg_3 {
-    background-color: #952aff;
-}
-
-.section_white .container div .row div .ag-courses_item a .item_bg_4 {
-    background-color: #cd3e94;
-}
-
-.section_white .container div .row div .ag-courses_item a .item_bg_5 {
-    background-color: #4c49ea;
-}
 
 .section_white .about_size2::before {
     width: 250px;
@@ -506,6 +505,28 @@ section div div .button_res:hover i::after {
 }
 
 /* end team */
+/* start facts */
+section .text_font {
+    font-family: 'Alkatra', cursive;
+}
+
+/* end facts */
+/* start lorem */
+.div_back_image {
+    background-image: url("../../images/images\ my_team/pngtree-portrait-of-multi-cultural-office-staff-standing-in-lobby-image_1562888.jpg");
+}
+
+.div_orange {
+    background-color: #ff6338d6;
+    height: 90vh;
+    z-index: 1;
+}
+
+.container_here {
+    z-index: 2;
+}
+
+/* end lorem */
 /* start media */
 @media (max-width: 991px) and (min-width: 0px) {
 

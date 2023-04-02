@@ -61,7 +61,8 @@ body {
 .about_size::before,
 .about_size1::before,
 .about_size2::before,
-.about_size3::before {
+.about_size3::before,
+.about_size4::before {
     content: "";
     position: absolute;
     height: 3px;
@@ -161,6 +162,49 @@ section div .arrow:hover,
 
 .item_bg_5 {
     background-color: #4c49ea;
+}
+
+.my_card {
+    transition: 0.5s;
+    border-bottom: 6px solid var(--organge);
+    overflow: hidden;
+}
+
+.my_card:hover {
+    color: var(--white);
+    background-color: var(--organge);
+}
+
+.image_height {
+    height: 300px;
+}
+
+.div_white {
+    background-color: var(--organge);
+    width: 140px;
+    height: 3px;
+}
+
+.my_card:hover .div_white {
+    background-color: var(--white);
+}
+
+.div_hover {
+    background-color: #000000b1;
+    width: 50px;
+    height: 50px;
+    transform: translate(410px, -20px);
+    transition: 0.5s;
+}
+
+.my_card:hover .div_hover {
+    height: 300px;
+    border-radius: 0%;
+    transform: translate(0px, 0px);
+}
+
+.icon_hover:hover {
+    color: blue;
 }
 
 /* end everyone */
@@ -460,50 +504,6 @@ section div div .button_res:hover i::after {
     width: 320px;
 }
 
-.section_team .container .row div .my_card {
-    transition: 0.5s;
-    border-bottom: 6px solid var(--organge);
-    overflow: hidden;
-}
-
-.section_team .container .row div .my_card:hover {
-    color: var(--white);
-    background-color: var(--organge);
-}
-
-.section_team .container .row div .my_card .image_height {
-    height: 300px;
-}
-
-.section_team .container .row div div div .div_white {
-    background-color: var(--organge);
-    width: 140px;
-    height: 3px;
-}
-
-.section_team .container .row div .my_card:hover .div_white {
-    background-color: var(--white);
-}
-
-.section_team .container .row div .my_card .div_hover {
-    background-color: #000000b1;
-    width: 50px;
-    height: 50px;
-    transform: translate(300px, -20px);
-    transition: 0.5s;
-}
-
-.section_team .container .row div .my_card:hover .div_hover {
-    width: 310px;
-    height: 300px;
-    border-radius: 0%;
-    transform: translate(0px, 0px);
-}
-
-.section_team .container .row div .my_card .div_hover .icon_hover:hover {
-    color: blue;
-}
-
 /* end team */
 /* start facts */
 section .text_font {
@@ -527,6 +527,64 @@ section .text_font {
 }
 
 /* end lorem */
+/* start recent */
+section .about_size4::before {
+    width: 250px;
+}
+
+.my_card:hover .a_color {
+    color: var(--white);
+}
+
+/* end recent */
+/* start before footer */
+.image_footer {
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../../images/images\ footer/building_minimalism_bw_132403_800x600.jpg");
+}
+
+section .container .row div .div_icon_hover {
+    width: 0px;
+}
+
+section .container .row div .div_icon_hover:hover {
+    color: var(--organge);
+}
+
+section .container .row div form .input-container label {
+    top: 0px;
+    left: 0%;
+    transition: all 0.3s ease-in-out;
+}
+
+input,
+textarea {
+    border: 0;
+    border-bottom: 1px solid #555;
+}
+
+section .container .row div form .input-container input:focus,
+section .container .row div form .input-container textarea:focus {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--organge);
+}
+
+section .container .row div form .input-container input:focus~label,
+section .container .row div form .input-container input:valid~label,
+section .container .row div form .input-container textarea:focus~label,
+section .container .row div form .input-container textarea:valid~label {
+    top: -12px;
+    font-size: 12px;
+}
+
+section .container .row div .hr_wihte {
+    width: 350px;
+}
+
+/* end before footer */
 /* start media */
 @media (max-width: 991px) and (min-width: 0px) {
 
@@ -543,7 +601,9 @@ section .text_font {
     }
 
     section .container .row div .image_width,
-    section .section_image div div div .container .row div .iamge_background {
+    section .section_image div div div .container .row div .iamge_background,
+    section .container .row div .hr_wihte,
+    section .container .row div .div_icon_hover {
         width: 100%;
     }
 
@@ -559,12 +619,17 @@ section .text_font {
     section .about_size1::before,
     .section_white .about_size2::before,
     .section_image div .navbar .container .collapse ul li div .div_ciric,
-    .section_team .about_size3::before {
+    .section_team .about_size3::before,
+    section .about_size4::before {
         display: none;
     }
 
     .font_text {
         font-size: 30px;
+    }
+
+    section .container .row div form .input-container label {
+        left: 14%;
     }
 }
 
